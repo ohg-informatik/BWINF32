@@ -1,0 +1,9 @@
+[submodule "a1-rationalisierung/code"]
+	path = a1-rationalisierung/code
+	url = ../Rationalisierung.git
+[submodule "a3-vortaenzer/code"]
+	path = a3-vortaenzer/code
+	url = ../BWINF32-DanceMaster.git
+[submodule "j1-songwriter/code"]
+	path = j1-songwriter/code
+	url = ../BWINF32-SongWriter.git
