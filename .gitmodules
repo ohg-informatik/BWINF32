@@ -7,3 +7,6 @@
 [submodule "j1-songwriter/code"]
 	path = j1-songwriter/code
 	url = https://github.com/ohg-informatik/BWINF32-SongWriter.git
+[submodule "a4-fotoforensik/code"]
+	path = a4-fotoforensik/code
+	url = https://github.com/ohg-informatik/BWINF32-Fotoforensik.git
