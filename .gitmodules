@@ -1,12 +1,19 @@
 [submodule "a1-rationalisierung/code"]
 	path = a1-rationalisierung/code
 	url = https://github.com/ohg-informatik/BWINF32-Rationalisierung.git
+    
+[submodule "a2-tutorien/code"]
+	path = a2-tutorien/code
+	url = https://github.com/ohg-informatik/BWINF32-Tutorien.git
+    
 [submodule "a3-vortaenzer/code"]
 	path = a3-vortaenzer/code
 	url = https://github.com/ohg-informatik/BWINF32-DanceMaster.git
-[submodule "j1-songwriter/code"]
-	path = j1-songwriter/code
-	url = https://github.com/ohg-informatik/BWINF32-SongWriter.git
+    
 [submodule "a4-fotoforensik/code"]
 	path = a4-fotoforensik/code
 	url = https://github.com/ohg-informatik/BWINF32-Fotoforensik.git
+    
+[submodule "j1-songwriter/code"]
+	path = j1-songwriter/code
+	url = https://github.com/ohg-informatik/BWINF32-SongWriter.git
