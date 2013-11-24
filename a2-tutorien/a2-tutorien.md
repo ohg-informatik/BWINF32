@@ -5,4 +5,4 @@ Tutorien
 
 ## Lösungsansatz ##
 
-Es sollen fünf Termine zurückgegeben werden, für die egal welcher Termin gestrichen wird immer vier Tutoren zur Verfügung stehen. Diese Überprüfung wird von der Klasse `PossibleSolution` übernommen. Die Klasse überprüft ob die übergebene Terminliste eine Terminliste, die den Vorgaben entspricht. Um eine Terminliste übergeben zu können, müssen zuerst die Werte aus der GUI übernommen und gefiltert werden. 
+Es sollen fünf Termine für Tutorien zurückgegeben werden. Ein beliebiger Termin kann gestrichen werden, trotzdem stehen für die verbleibenden Termine vier Tutoren zur Verfügung. Die Überprüfung dieser Vorraussetzungen an die Lösung wird von der Klasse `PossibleSolution` übernommen. Die Klasse überprüft, ob die übergebene Terminliste den oben genannten Vorgaben entspricht. Um eine Terminliste übergeben zu können, müssen zuerst die Werte aus der GUI übernommen und gefiltert werden. 
