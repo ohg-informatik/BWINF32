@@ -15,3 +15,25 @@ Es sollen aufgrund der Auswahlen der Tutoren fünf von sechs Terminen zurückgeg
 `testPossibility()`, ob egal welcher der fünf Termine wegfällt mindestens vier Tutoren verfügbar sind.
 
 ## Beispiel ##
+
+## Code-Auszug ##
+
+    public boolean testPossibility(){
+		for(int i=0;i<termine.size();i++){
+			int count = 0;
+			for(int j=0;j<termine.size();j++){
+				for(int k=0;k<dates.length;k++){
+					if(k!=i){
+						if(dates[termine.get(j)][k]){
+							count++;
+							break;
+						}
+					}
+				}
+			}
+			if(count<4){
+				return false;
+			}
+		}
+		return true;
+	}
