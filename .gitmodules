@@ -17,3 +17,7 @@
 [submodule "j1-songwriter/code"]
 	path = j1-songwriter/code
 	url = https://github.com/ohg-informatik/BWINF32-SongWriter.git
+    
+[submodule "j2-zollstock/code"]
+	path = j2-zollstock/code
+	url = https://github.com/ohg-informatik/BWINF32-Zollstock.git
