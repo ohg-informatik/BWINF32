@@ -6,7 +6,15 @@ Tutorien
 
 ## Lösungsansatz ##
 
-Es sollen fünf Termine für Tutorien zurückgegeben werden. Ein beliebiger Termin kann gestrichen werden, trotzdem stehen für die verbleibenden Termine vier Tutoren zur Verfügung. Die Überprüfung dieser Vorraussetzungen an die Lösung wird von der Klasse `PossibleSolution` übernommen. Die Klasse überprüft, ob die übergebene Terminliste den oben genannten Vorgaben entspricht. Um eine Terminliste übergeben zu können, müssen zuerst die Werte aus der GUI übernommen und gefiltert werden.
+Es sollen fünf Termine für Tutorien zurückgegeben werden. Ein beliebiger Termin kann gestrichen werden, trotzdem stehen für die verbleibenden Termine vier Tutoren zur Verfügung.
+
+Zu Beginn des Programms werden zuerst die Werte aus der GUI übernommen und gefiltert. Vor der Berechnung aller möglichen Lösungen wird eine Fallunterscheidung vorgenommen:
+
+- Falls nur für vier oder weniger Termine Tutoren ausgewählt wurden, kann es keine Lösung mit fünf zustande kommenden Terminen geben. In diesem Fall endet das Programm mit dem Hinweis `Zu wenige Termine ausgewählt!`.
+
+- Falls für 5 oder 6 Termine Tutoren als verfügbar markiert wurden, werden eine mögliche Lösung (bei 5 Terminen) bzw. 6 mögliche Lösungen (bei 6 Terminen) vorgeschlagen.
+
+Die Überprüfung der zuerst genannten Vorraussetzungen an die Lösung(en) wird von der Klasse `PossibleSolution` übernommen. Es wird die erste als gültig bestätigte Lösung ausgegeben. Ist keine der bis zu 6 Lösungen gültig, bricht das Programm mit der Meldung `Keine Terminvorschläge möglich [...]` ab.
 
 
 ## Aufbau ##
@@ -19,6 +27,7 @@ Es sollen fünf Termine für Tutorien zurückgegeben werden. Ein beliebiger Term
 
 ## Beispiel ##
 
+![Screenshot Tutorien](http://i.imgur.com/VdLJg0A.jpg)
 
 ## Nutzung ##
 
