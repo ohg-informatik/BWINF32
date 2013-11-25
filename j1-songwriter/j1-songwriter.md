@@ -26,36 +26,53 @@ Sie können zum Testen des Programms die mitgelieferte GUI benutzen, welche Sie 
 
 ## Code-Auszug ##
 
-	public void calcSolutions() {
-		ArrayList<char[]> solutions = new ArrayList<char[]>();
-		//Maximal count of solutions is 2^links (that's binary!)
-		int max_solutions = (int) Math.pow(2, this.links);
+	private String[] generateVerse(int n_lines) {
+		//Determine random (odd) number of syllables for this verse
+		int n1_sil = 1 + this.rand.nextInt(5)*2;
+		int n2_sil = 1 + this.rand.nextInt(5)*2;
+		//Nerf dynamic line lengths
+		if(this.rand.nextInt(2) == 1) n2_sil = n1_sil;
+
+		char[] set_cons = this.getConsSet();
+		char[] set_vows = this.getVowsSet();
 		
-		for(int i=0; i<max_solutions; i++){//For each solution
-			//Create byte (0/1-ish) from current solution int
-			char[] bin = this.zerofill(Integer.toBinaryString(i), this.links).toCharArray();
-			if(this.checkConsecBits(bin)){
-				solutions.add(bin);
+		String[] lines = new String[n_lines];
+		for(int i_line=0; i_line < n_lines; i_line++){
+			if((i_line % 2) == 0){
+				lines[i_line] = this.generateLine(n1_sil, set_cons, set_vows);
+			}else{
+				lines[i_line] = this.generateLine(n2_sil, set_cons, set_vows);
 			}
 		}
 		
-		for(int i=0; i<solutions.size(); i++){
-			System.out.println("Lösung " + i + ": " + new String(solutions.get(i)));
-			//System.out.println(i + "," + new String(solutions.get(i))); //CSV
+		//Add chant (such as 'Fake That!')
+		if(this.rand.nextInt(4) == 1){
+			String[] new_lines = new String[lines.length + 1];
+			for(int i=0; i<lines.length; i++){
+				new_lines[i] = lines[i];
+			}
+			new_lines[lines.length] = this.chants[this.rand.nextInt(this.chants.length)];
+			lines = new_lines;
 		}
+		return(lines);
 	}
 
-	/**
-	 * Checks byte for consecutive bits
-	 * @param charArray
-	 * @return 
-	 */
-	private boolean checkConsecBits(char[] bin) {
-		for(int j=1; j<bin.length; j++){//For each bit (=link)
-			if(bin[j] == '0' && bin[j-1] == '0'){
-				return false;
+	private String generateLine(int n_syl, char[] cons_set, char[] vows_set) {
+		String line = "";
+		//Make sure number of syllables is odd
+		if((n_syl / 2) % 1 != 0) n_syl++;
+
+		//Choose random consonant and vowel from array fields
+		String xcon = Character.toString(cons_set[this.rand.nextInt(cons_set.length)]);
+		String xvow = Character.toString(vows_set[this.rand.nextInt(vows_set.length)]);
+		
+		for(int i_syl=0; i_syl < n_syl; i_syl++){
+			//Check if we're 'within the middle'
+			if((i_syl) == (int) Math.floor(n_syl/2)){
+				line = line.concat(xcon + xvow + "p di ");
+			}else{
+				line = line.concat(xcon + xvow + " ");
 			}
 		}
-		return true;
+		return(line.trim());
 	}
-
