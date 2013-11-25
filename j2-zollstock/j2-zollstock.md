@@ -19,7 +19,7 @@ Die Menge, die nicht gefiltert wurde, beschreibt alle Lösungen, die dem Kriteri
 
 ### Ergebnisse ###
 
-Das Programm ermittelte 89 Lösungen: 
+Das Programm ermittelte 89 Lösungen, woraus folgt, dass Ralucas These wahr ist und die Möglichkeit besteht, dass sie den Zollstock innerhalb ihres ersten Monats der Ausbildung nicht zwangsläufig mehrmals gleich gefaltet hat.
 
 
      0: 10101010        23: 011101101        45: 101101110        67: 110111111
