@@ -37,9 +37,12 @@ Sie können zum Testen des Programms die mitgelieferte GUI benutzen, welche Sie 
 ## Code-Auszug ##
 
     public boolean testPossibility(){
+    		//Iteriert für die Anzahl der Termine
 		for(int i=0;i<termine.size();i++){
-			int count = 0;
+			int count = 0; //Anzahl der Tutoren
+			//iteriert die Tutoren
 			for(int j=0;j<termine.size();j++){
+				//iteriert die Tage
 				for(int k=0;k<dates.length;k++){
 					if(k!=i){
 						if(dates[termine.get(j)][k]){
