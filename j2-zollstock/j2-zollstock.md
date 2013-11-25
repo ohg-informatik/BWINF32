@@ -11,7 +11,7 @@ Im Folgenden werden nicht die 10 Segmente des Zollstocks, sondern die 9 "Gelenke
 
 ### Lösungsfindung ###
 
-Da jedes der 9 Bits einer Kombination entweder 1 oder 0 sein kann, erhält man eine Anzahl von 2<sup>9</sup> (= 512) verschiedenen Kombinationen. Man kann daher eine Schleife 512 mal durchlaufen und die Zählvariable in einen Binär-Code umwandeln, sodass man eine Möglichkeit der Zollstock-Faltung erhält.
+Da jedes der 9 Bits einer Kombination aus entweder 1 oder 0 sein kann, erhält man eine Anzahl von 2<sup>9</sup> (= 512) verschiedenen Kombinationen. Man kann daher eine Schleife 512 mal durchlaufen und die Zählvariable in einen Binär-Code umwandeln, sodass man eine Möglichkeit der Zollstock-Faltung erhält.
 
 Das gestellte Kriterium ist eine Limitierung der effektiven Zollstocklänge auf 50cm. Da die Segmente 20cm lang sind, können nur 2 Segmente "nebeneinander" gestreckt sein, damit die Länge von 50cm nicht überschritten wird. Dies bedeutet auch, dass nie zwei benachbarte Elemente gestreckt sein können, also den Wert `0` haben. Die Implementation dieser Überprüfung iteriert durch jedes (bis auf das erste) Bit einer Kombination und ermittelt die Kombination als ungültig, wenn das aktuell betrachtete Bit und sein "Vorgänger" gleich `0` sind, also zwei 0-Bits nebeneinander liegen (und der Zollstock an dieser Stelle 60cm oder mehr Platz einnimmt).
 
